@@ -1,15 +1,27 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Youtube, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Youtube, Instagram, Facebook, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      console.log("Subscribed with:", email);
+      alert("Thank you for subscribing!");
+      setEmail("");
+    }
+  };
 
   return (
     <footer className="w-full bg-primary text-primary-foreground">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* About Section */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -136,6 +148,38 @@ export function Footer() {
                 Follow on Instagram
               </Button>
             </div>
+          </motion.div>
+
+          {/* Subscribe Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <h3 className="font-bold text-lg mb-4">Subscribe</h3>
+            <p className="text-sm mb-4 leading-relaxed">
+              Stay updated with latest courses, physics tips, and exclusive content.
+            </p>
+            <form onSubmit={handleSubscribe} className="space-y-3">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-primary-foreground focus:ring-primary-foreground/30"
+                required
+                data-testid="input-footer-subscribe-email"
+              />
+              <Button
+                type="submit"
+                className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-bold text-sm flex items-center justify-center gap-2"
+                data-testid="button-footer-subscribe"
+              >
+                <Send className="w-4 h-4" />
+                Subscribe
+              </Button>
+            </form>
           </motion.div>
         </div>
       </div>
