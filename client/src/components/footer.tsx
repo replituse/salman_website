@@ -34,10 +34,10 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               {[
-                { icon: Facebook, href: "#", label: "Facebook", color: "#1877F2" },
-                { icon: Youtube, href: "#", label: "YouTube", color: "#FF0000" },
-                { icon: Linkedin, href: "#", label: "LinkedIn", color: "#0077B5" },
-                { icon: Instagram, href: "#", label: "Instagram", color: "url(#instagram-gradient)" },
+                { icon: Facebook, href: "#", label: "Facebook", bgColor: "#1877F2" },
+                { icon: Youtube, href: "#", label: "YouTube", bgColor: "#FF0000" },
+                { icon: Linkedin, href: "#", label: "LinkedIn", bgColor: "#0077B5" },
+                { icon: Instagram, href: "#", label: "Instagram", bgColor: "linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #833ab4 100%)" },
               ].map((social, idx) => (
                 <motion.a
                   key={idx}
@@ -45,8 +45,7 @@ export function Footer() {
                   whileHover={{ scale: 1.2 }}
                   className="w-11 h-11 rounded-full text-white flex items-center justify-center transition-all shadow-lg"
                   style={{
-                    backgroundColor: social.label === "Instagram" ? undefined : social.color,
-                    background: social.label === "Instagram" ? "linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #833ab4 100%)" : undefined
+                    background: social.bgColor,
                   }}
                   data-testid={`link-footer-social-${social.label.toLowerCase()}`}
                 >
