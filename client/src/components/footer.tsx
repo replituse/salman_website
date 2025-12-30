@@ -21,7 +21,7 @@ export function Footer() {
     <footer className="w-full bg-primary text-primary-foreground">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
           {/* About Section */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -32,18 +32,22 @@ export function Footer() {
             <p className="text-sm leading-relaxed mb-6">
               With a passion for Physics and engineering, I commit to break boundaries in STEM competitions and academic excellence.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               {[
-                { icon: Facebook, href: "#", label: "Facebook" },
-                { icon: Youtube, href: "#", label: "YouTube" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Instagram, href: "#", label: "Instagram" },
+                { icon: Facebook, href: "#", label: "Facebook", color: "#1877F2" },
+                { icon: Youtube, href: "#", label: "YouTube", color: "#FF0000" },
+                { icon: Linkedin, href: "#", label: "LinkedIn", color: "#0077B5" },
+                { icon: Instagram, href: "#", label: "Instagram", color: "url(#instagram-gradient)" },
               ].map((social, idx) => (
                 <motion.a
                   key={idx}
                   href={social.href}
-                  whileHover={{ scale: 1.15 }}
-                  className="w-10 h-10 rounded-full bg-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/40 flex items-center justify-center transition-all"
+                  whileHover={{ scale: 1.2 }}
+                  className="w-11 h-11 rounded-full text-white flex items-center justify-center transition-all shadow-lg"
+                  style={{
+                    backgroundColor: social.label === "Instagram" ? undefined : social.color,
+                    background: social.label === "Instagram" ? "linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #833ab4 100%)" : undefined
+                  }}
                   data-testid={`link-footer-social-${social.label.toLowerCase()}`}
                 >
                   <social.icon className="w-5 h-5" />
@@ -150,14 +154,15 @@ export function Footer() {
             </div>
           </motion.div>
 
-          {/* Subscribe Section */}
+          {/* Subscribe Section - Right Side */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
+            className="md:col-span-1 lg:col-span-1"
           >
-            <h3 className="font-bold text-lg mb-4">Subscribe</h3>
+            <h3 className="font-bold text-lg mb-3">Subscribe</h3>
             <p className="text-sm mb-4 leading-relaxed">
               Stay updated with latest courses, physics tips, and exclusive content.
             </p>
@@ -167,13 +172,13 @@ export function Footer() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-primary-foreground focus:ring-primary-foreground/30"
+                className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/60 focus:border-primary-foreground focus:ring-primary-foreground/30 text-sm"
                 required
                 data-testid="input-footer-subscribe-email"
               />
               <Button
                 type="submit"
-                className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-bold text-sm flex items-center justify-center gap-2"
+                className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-bold text-sm flex items-center justify-center gap-2 h-10"
                 data-testid="button-footer-subscribe"
               >
                 <Send className="w-4 h-4" />
