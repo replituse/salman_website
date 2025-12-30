@@ -6,7 +6,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-secondary text-secondary-foreground">
+    <footer className="w-full bg-primary text-primary-foreground">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
@@ -31,7 +31,7 @@ export function Footer() {
                   key={idx}
                   href={social.href}
                   whileHover={{ scale: 1.15 }}
-                  className="w-10 h-10 rounded-full bg-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/40 flex items-center justify-center transition-all"
+                  className="w-10 h-10 rounded-full bg-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/40 flex items-center justify-center transition-all"
                   data-testid={`link-footer-social-${social.label.toLowerCase()}`}
                 >
                   <social.icon className="w-5 h-5" />
@@ -129,7 +129,7 @@ export function Footer() {
                 </a>
               </div>
               <Button 
-                className="w-full mt-4 bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90 font-bold text-sm"
+                className="w-full mt-4 bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-bold text-sm"
                 data-testid="button-footer-instagram"
               >
                 <Instagram className="w-4 h-4 mr-2" />
@@ -141,20 +141,20 @@ export function Footer() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-secondary-foreground/20" />
+      <div className="border-t border-primary-foreground/20" />
 
       {/* Bottom Section */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm"
+        className="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/90"
       >
         <p data-testid="text-footer-copyright">&copy; {currentYear} Salman Sir Physics. All rights reserved.</p>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-foreground transition-colors underline" data-testid="link-footer-sitemap">Sitemap</a>
-          <a href="#" className="hover:text-foreground transition-colors underline" data-testid="link-footer-privacy">Privacy Policy</a>
-          <a href="#" className="hover:text-foreground transition-colors underline" data-testid="link-footer-terms">Terms of Use</a>
+          <a href="#" className="hover:text-primary-foreground transition-colors underline" data-testid="link-footer-sitemap">Sitemap</a>
+          <a href="#" className="hover:text-primary-foreground transition-colors underline" data-testid="link-footer-privacy">Privacy Policy</a>
+          <a href="#" className="hover:text-primary-foreground transition-colors underline" data-testid="link-footer-terms">Terms of Use</a>
         </div>
       </motion.div>
     </footer>
