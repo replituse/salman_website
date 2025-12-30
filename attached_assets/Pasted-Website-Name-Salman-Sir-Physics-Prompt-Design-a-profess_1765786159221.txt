@@ -1,0 +1,208 @@
+Website Name:
+Salman Sir Physics
+
+Prompt:
+
+Design a professional personal website titled “Salman Sir Physics” for a Dubai-based Physics teacher, STEM mentor, and F1 in Schools coach.
+The website should be built using the uploaded PDF (“My Journey”) as the primary source of content, achievements, and timeline.
+
+Branding & Theme
+
+Color Theme: Green and Yellow
+
+Green → growth, learning, STEM
+
+Yellow → energy, innovation, excellence
+
+Look & Feel:
+
+Professional
+
+Inspirational
+
+Mentor-focused
+
+Suitable for:
+
+Students
+
+Parents
+
+Schools
+
+STEM organizations in UAE
+
+Clean typography, modern UI
+
+Smooth but subtle animations
+
+Fully responsive (mobile, tablet, desktop)
+
+Website Structure
+1. Home
+
+Hero Section:
+
+Title: Salman Sir – Physics
+
+Subtitle: Physics Educator | STEM Mentor | F1 in Schools Coach
+
+Short introduction highlighting:
+
+Dubai-based
+
+Physics education
+
+STEM & F1 in Schools leadership
+
+Call-to-action buttons:
+
+Explore Programs
+
+Book Counseling
+
+2. About Salman Sir
+
+Detailed professional journey extracted from the PDF:
+
+Physics teacher at JSS International School, Dubai
+
+F1 in Schools Club Incharge
+
+STEM lab & competition leadership
+
+Teaching philosophy:
+
+Practical learning
+
+Hands-on STEM education
+
+Mentorship-driven approach
+
+Inspirational quote section:
+
+“Believe in yourself and all that you are…”
+
+3. Expertise & Roles
+
+Present as cards or sections:
+
+Physics Teaching (Concept-based learning)
+
+STEM & Engineering Mentorship
+
+F1 in Schools Program Leadership
+
+RC Car Design, Aerodynamics & Coding
+
+Student Counseling & Career Guidance
+
+Competition Preparation (National & World Level)
+
+4. Achievements & Journey Timeline
+
+Create a visual timeline using PDF data:
+
+F1 in Schools Club inception (2020)
+
+National & UAE Championships
+
+Team Nautilus achievements
+
+Hosting national competitions
+
+KHDA presentations
+
+STEM lab development
+
+World Finals:
+
+8th place globally
+
+Top in Asia & GCC
+
+Fastest race time globally
+
+Highlight:
+
+1.074 seconds record
+
+Mentorship impact
+
+Global recognition
+
+5. Programs & Courses
+
+F1 in Schools (Juniors & Seniors)
+
+STEM learning programs
+
+RC Car engineering programs
+
+Physics enrichment sessions
+
+Competition-focused coaching
+
+Each with:
+
+Short description
+
+Target age group
+
+Learning outcomes
+
+6. Impact & Recognition
+
+Student growth & achievements
+
+National & international exposure
+
+Visits from:
+
+ISRO scientists
+
+STEM leaders
+
+Educational authorities
+
+Emphasis on mentorship and real-world learning
+
+7. Contact & Counseling
+
+Contact form
+
+WhatsApp button
+
+Email
+
+Location: Dubai, UAE
+
+CTA:
+
+Book a Counseling Session
+
+Collaborate with Salman Sir
+
+Technical Instructions
+
+Use HTML, CSS, JavaScript (or React if preferred)
+
+SEO-optimized structure
+
+Fast loading
+
+Professional icons
+
+Timeline & card-based layouts
+
+Consistent green & yellow accents
+
+Content Rules
+
+All content must be derived from or aligned with the uploaded PDF
+
+Tone: mentor-like, professional, inspiring
+
+Avoid casual language
+
+Emphasize STEM leadership, discipline, and excellence

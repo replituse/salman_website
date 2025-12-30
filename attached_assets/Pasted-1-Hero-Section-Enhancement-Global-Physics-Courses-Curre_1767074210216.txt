@@ -1,0 +1,126 @@
+1️⃣ Hero Section Enhancement (Global Physics Courses)
+Current Issue
+
+The hero section is text-only and feels flat.
+
+Required Change
+
+Add a full-width background image behind the “Global Physics Courses” heading, similar to the course detail hero image (Image 2 reference).
+
+Image should be:
+
+Academically relevant (campus, classroom, physics learning environment)
+
+Slightly darkened using a soft overlay for text readability
+
+Keep text center-aligned:
+
+Main heading
+
+Short description below
+
+Maintain same typography, spacing, and color theme
+
+No gradients, no harsh overlays
+
+✅ Result:
+Hero section should feel premium, global, and aspirational, like an international education platform.
+
+2️⃣ Filter/Search Bar Styling (Minor Enhancement)
+
+Keep existing layout (search + filters in one row)
+
+Add:
+
+Slight background container or soft shadow
+
+More vertical spacing from hero
+
+Filters should feel like a control panel, not floating elements
+
+3️⃣ Course Cards – Image-Based Design
+Current Issue
+
+Icons/symbols feel generic and less engaging.
+
+Required Change
+
+Replace icons/symbols in course cards with course-specific images
+
+Each card should include:
+
+A top image section (rectangular, rounded corners)
+
+Example:
+
+JEE → classroom / problem-solving
+
+NEET → medical + physics learning
+
+A-Levels → international classroom
+
+Below image:
+
+Course title
+
+Duration & mode
+
+Short description
+
+CTA button (View Details)
+
+Image Guidelines
+
+Use subtle, professional academic images
+
+Images should be:
+
+Consistent in size
+
+Soft-toned
+
+Not too bright or busy
+
+4️⃣ Card Layout & Interaction
+
+Increase internal padding for breathing space
+
+Maintain rounded corners
+
+Add subtle hover effect:
+
+Slight lift
+
+Soft shadow
+
+Buttons should remain solid, not outlined, matching brand color
+
+5️⃣ Visual Consistency Rules (IMPORTANT)
+
+Follow same color palette as current site
+
+No gradients
+
+No visual clutter
+
+Plenty of white space
+
+Keep everything calm, academic, and premium
+
+✅ Final Expected Outcome
+
+Courses page feels:
+
+International
+
+Trustworthy
+
+Parent-friendly
+
+Student-focused
+
+Hero section visually matches individual course pages
+
+Course cards feel rich and informative
+
+UI looks like a global physics academy, not just a coaching page
