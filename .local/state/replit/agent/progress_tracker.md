@@ -17,3 +17,5 @@
 [x] 17. Implemented fully working hamburger menu for mobile/tablet view
 [x] 18. Ensured full responsive design for all screen sizes
 [x] 19. Updated footer with golden background matching brand colors
+[x] 20. Created physics-related placeholder for missing course images
+[x] 21. Added image error handling with smart icon selection per course type

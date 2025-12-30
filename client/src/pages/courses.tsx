@@ -13,6 +13,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion, AnimatePresence } from "framer-motion";
+import { ImagePlaceholder } from "@/components/image-placeholder";
 import { 
   Search, Globe, BookOpen, GraduationCap, MonitorPlay, Users, 
   Target, Rocket, ArrowLeft, Atom, HeartPulse, GraduationCap as BookIcon,
@@ -25,10 +26,15 @@ export default function Courses() {
   const [country, setCountry] = useState("all");
   const [level, setLevel] = useState("all");
   const [mode, setMode] = useState("all");
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
 
   const { data: courses = [], isLoading } = useQuery<Course[]>({
     queryKey: ["/api/courses"],
   });
+
+  const handleImageError = (courseId: string) => {
+    setImageErrors(prev => new Set([...prev, courseId]));
+  };
 
   const filteredCourses = courses.filter((course) => {
     const matchesSearch = 
@@ -280,11 +286,19 @@ export default function Courses() {
                   >
                     {/* Course Card Thumbnail Image */}
                     <div className="relative h-56 overflow-hidden">
-                      <img 
-                        src={course.thumbnailImage || "https://images.unsplash.com/photo-1523050335102-c3250c82232c?auto=format&fit=crop&q=80&w=800"} 
-                        alt={course.examName}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
+                      {imageErrors.has(course.id) ? (
+                        <ImagePlaceholder 
+                          title={course.examName} 
+                          icon={course.examName.includes("JEE") ? "atom" : course.examName.includes("NEET") ? "zap" : "bulb"}
+                        />
+                      ) : (
+                        <img 
+                          src={course.thumbnailImage || "https://images.unsplash.com/photo-1523050335102-c3250c82232c?auto=format&fit=crop&q=80&w=800"} 
+                          alt={course.examName}
+                          onError={() => handleImageError(course.id)}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                      )}
                       <div className="absolute top-4 right-4">
                         <Badge 
                           className="bg-primary/90 text-white border-none shadow-lg px-4 py-1 font-bold backdrop-blur-md"
